@@ -2,12 +2,12 @@
     "images": {
         "output_directory": "./images/",
         "encoding": "jpeg",
-        "width": 2592,
-        "height": 1944,
+        "width": 1920,
+        "height": 1080,
         "image_quality": 70,
         "preview_seconds": 1,
-        "vertical_flip": false,
-        "horizontal_flip": false,
+        "vertical_flip": true,
+        "horizontal_flip": true,
         "meter_mode": "matrix",
         "interval_seconds": 600
     },
@@ -17,6 +17,6 @@
             "green": 255,
             "blue": 255
         },
-        "size": 48
+        "size": 28
     }
 }
