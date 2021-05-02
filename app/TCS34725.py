@@ -200,7 +200,6 @@ class TCS34725:
         self.SetLight(40)
         return 0
 
-
     def GetLux_Interrupt(self, Threshold_H, Threshold_L):
         self.Set_Interrupt_Threshold(Threshold_H, Threshold_L);
         if(GPIO.input(INT_PORT) == GPIO.LOW):

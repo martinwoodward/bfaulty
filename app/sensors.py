@@ -15,7 +15,6 @@ class sensors:
         self.ads = ADS1015()
         self.light = TCS34725(0X29, debug=False)
 
-
     def get_readings(self):
         # Ignore first results & initialize sensors
         temperature = self.bme280.get_temperature()
@@ -32,8 +31,10 @@ class sensors:
 
         # soil ranges from dry: 1400 to full wet: 800 so give as a percentage
         soil0 = (1400 - self.ads.read(0))/6
+
+        self.light.Get_RGBData()  # Populate RGB registers
         lux = self.light.Get_Lux()
-        colorTemp = 0 #self.light.Get_ColorTemp()
+        colorTemp = self.light.Get_ColorTemp()
 
         time_str = time.strftime("%H:%M:%S")
 

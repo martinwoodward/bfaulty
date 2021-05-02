@@ -1,5 +1,6 @@
 /.ssh/*
 /**/roboto/*
+*.pyc
 /**/html/*
 /**/image.jpg
 /**/preview.jpg

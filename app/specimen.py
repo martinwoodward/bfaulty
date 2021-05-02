@@ -39,7 +39,7 @@ class specimen:
 
     def format(self, readings):
         degree_symbol=u"\u00b0"
-        return "#growlab - bfaulty\n{}\nTemperature: {:05.2f}{}C \nPressure: {:05.2f}hPa \nHumidity: {:05.2f}% \nSoil: {:05.2f}%".format(readings["time"], readings["temperature"], degree_symbol, readings["pressure"], readings["humidity"], readings["soil0"])
+        return "#growlab/bfaulty - {}\nTemp: {:05.2f}{}C   Pressure: {:0.0f} hPa   Humidity: {:05.2f}%   Soil: {:05.2f}%   Lux: {:0.0f}   CTemp: {:0.0f}K".format(readings["time"], readings["temperature"], degree_symbol, readings["pressure"], readings["humidity"], readings["soil0"], readings["lux"], readings["colourTemp"])
 
     def save_html(self, input_filename, output_path, readings):
         img = Image.open(input_filename, "r")
