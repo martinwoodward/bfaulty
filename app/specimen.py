@@ -57,6 +57,7 @@ class specimen:
         vals["time"] = readings["time"]
         vals["temperature"] = "{:05.2f}{}C".format(readings["temperature"], degree_symbol)
         vals["humidity"] = "{:05.2f}%".format(readings["humidity"])
+        vals["soil"] = "{:05.2f}%".format(readings["soil0"])
         vals["pressure"] = "{:05.2f}hPa".format(readings["pressure"])
         vals["uid"] = "{}".format(time.time())
 
