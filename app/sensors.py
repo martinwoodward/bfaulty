@@ -31,7 +31,7 @@ class sensors:
         humidity = self.bme280.get_humidity()
         soil0 = self.ads.read(0)
         lux = self.light.Get_Lux()
-        colorTemp = self.light.Get_ColorTemp()
+        colorTemp = 0 #self.light.Get_ColorTemp()
 
         time_str = time.strftime("%H:%M:%S")
 
