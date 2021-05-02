@@ -32,10 +32,9 @@ class specimen:
         bg_img.save("./alpha.png")
 #        img.paste(bg_img, box=(0,0))
         out = Image.alpha_composite(img, bg_img)
-        print("Saving {}..".format(filename))
         r = out.convert('RGB')
         r.save(filename, "JPEG")
-        print("Saved {}..OK".format(filename))
+        print("Saved {}.".format(filename))
 
     def format(self, readings):
         degree_symbol=u"\u00b0"
@@ -59,6 +58,8 @@ class specimen:
         vals["humidity"] = "{:05.2f}%".format(readings["humidity"])
         vals["soil"] = "{:05.2f}%".format(readings["soil0"])
         vals["pressure"] = "{:05.2f}hPa".format(readings["pressure"])
+        vals["lux"] = "{:05.2f}hPa".format(readings["lux"])
+        vals["ctemp"] = "{:05.2f}hPa".format(readings["colourTemp"])
         vals["uid"] = "{}".format(time.time())
 
         html = template.render(vals)

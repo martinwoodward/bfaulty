@@ -36,5 +36,5 @@ if __name__ == "__main__":
        pass
 
     spec = specimen(config["text"], config["images"])
-    spec.save_image("{}/image.jpg".format(pwd), frame, readings)
+    spec.save_image("{}/image.jpg".format(output_path), frame, readings)
     spec.save_html("{}/image.jpg".format(pwd), output_path, readings)
