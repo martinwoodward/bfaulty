@@ -29,7 +29,9 @@ class sensors:
         temperature = self.bme280.get_temperature()
         pressure = self.bme280.get_pressure()
         humidity = self.bme280.get_humidity()
-        soil0 = self.ads.read(0)
+
+        # soil ranges from dry: 1400 to full wet: 800 so give as a percentage
+        soil0 = (1400 - self.ads.read(0))/6
         lux = self.light.Get_Lux()
         colorTemp = 0 #self.light.Get_ColorTemp()
 
