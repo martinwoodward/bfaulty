@@ -22,7 +22,7 @@ class sensors:
         pressure = self.bme280.get_pressure()
         humidity = self.bme280.get_humidity()
         soil0 = self.ads.read(0)
-        light.TCS34725_init()
+        self.light.TCS34725_init()
 
         time.sleep(0.1)
 
