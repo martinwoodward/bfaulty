@@ -30,7 +30,7 @@ if __name__ == "__main__":
     frame = cam.get_frame()
 
     ts = time.time()
-    pwd = os.getcwd()
+    pwd = "/home/pi/bfaulty/app" #os.getcwd()
     output_path = pwd + "/html"
     image_path = output_path + "/{}/{}/{}/bfaulty_{}.jpg".format(datetime.datetime.fromtimestamp(ts).strftime('%Y'),datetime.datetime.fromtimestamp(ts).strftime('%m'),datetime.datetime.fromtimestamp(ts).strftime('%d'),datetime.datetime.fromtimestamp(ts).strftime('%Y%m%d%H%M%S'))
     data_path = output_path + "/{}/{}/bfaulty_{}.csv".format(datetime.datetime.fromtimestamp(ts).strftime('%Y'),datetime.datetime.fromtimestamp(ts).strftime('%m'),datetime.datetime.fromtimestamp(ts).strftime('%Y%m%d'))
