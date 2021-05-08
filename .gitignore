@@ -6,3 +6,7 @@
 /**/preview.jpg
 /**/alpha.png
 /**/__pycache__/**
+
+# Make sure we don't accidentally check in secrets
+config.json
+
