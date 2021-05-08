@@ -18,5 +18,9 @@
             "blue": 255
         },
         "size": 28
+    },
+    "upload": {
+        "connection_string": "UPDATE_WITH_YOUR_KEY",
+        "container": "$web"
     }
 }

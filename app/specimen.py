@@ -15,7 +15,7 @@ class specimen:
 
         img = Image.open(filename, "r").convert("RGBA")
         img_draw = ImageDraw.Draw(img)
-        font = ImageFont.truetype('roboto/Roboto-Regular.ttf', self.text_config["size"])
+        font = ImageFont.truetype('/home/pi/bfaulty/app/roboto/Roboto-Regular.ttf', self.text_config["size"])
         colour = (self.text_config["colour"]["red"] ,self.text_config["colour"]["green"], self.text_config["colour"]["blue"])
 
         text_size = img_draw.textsize(msg, font)
@@ -29,7 +29,7 @@ class specimen:
         bg_draw.rectangle((pos[0], pos[1], bg_size[0], bg_size[1]), fill=(0, 0, 0, overlay_transparency), outline=(255, 255, 255))
         bg_draw.text(xy=(pos[0]+10, pos[1]+10), text=msg, fill=colour, font=font)
 
-        bg_img.save("./alpha.png")
+        bg_img.save("/home/pi/bfaulty/app/html/alpha.png")
 #        img.paste(bg_img, box=(0,0))
         out = Image.alpha_composite(img, bg_img)
         r = out.convert('RGB')
@@ -47,7 +47,7 @@ class specimen:
         img.save(output_path+"/preview.jpg", "JPEG")
 
         template_text = ""
-        with open("index.jinja", 'r') as file:
+        with open("/home/pi/bfaulty/app/index.jinja", 'r') as file:
             template_text = file.read()
 
         template = Template(template_text)

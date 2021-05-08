@@ -3,3 +3,7 @@ pimoroni-bme280
 picamera
 pillow
 Jinja2
+azure-storage-blob
+psutil
+retry
+
