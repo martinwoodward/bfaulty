@@ -36,7 +36,7 @@ if __name__ == "__main__":
     output_path = pwd + "/html"
     image_path = output_path + "/{}/{}/{}/bfaulty_{}.jpg".format(datetime.datetime.fromtimestamp(ts).strftime('%Y'),datetime.datetime.fromtimestamp(ts).strftime('%m'),datetime.datetime.fromtimestamp(ts).strftime('%d'),datetime.datetime.fromtimestamp(ts).strftime('%Y%m%d%H%M%S'))
     data_path = output_path + "/{}/{}/bfaulty_{}.csv".format(datetime.datetime.fromtimestamp(ts).strftime('%Y'),datetime.datetime.fromtimestamp(ts).strftime('%m'),datetime.datetime.fromtimestamp(ts).strftime('%Y%m%d'))
-    image_path = "{}/image.jpg".format(output_path)
+    index_image_path = "{}/image.jpg".format(output_path)
     preview_image_path = "{}/preview.jpg".format(output_path)
     index_path = "{}/index.html".format(output_path)
 
@@ -54,16 +54,16 @@ if __name__ == "__main__":
     except:
        pass
 
-    spec.save_image(image_path, frame, readings)
-    spec.save_html(image_path, output_path, readings)
+    spec.save_image(index_image_path, frame, readings)
+    spec.save_html(index_image_path, output_path, readings)
 
     uploader = azuploader(config["upload"]["connection_string"], output_path)
 
     uploader.upload(image_path)
-    # uploader.upload(data_path)
+    #uploader.upload(data_path)
     uploader.upload(preview_image_path)
     uploader.upload(index_path)
-    uploader.upload(image_path)
+    uploader.upload(index_image_path)
 
 
 
