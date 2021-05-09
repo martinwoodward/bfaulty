@@ -1,6 +1,8 @@
 # bfaulty
 My project as part of [#growlab](https://blog.alexellis.io/the-grow-lab-challenge/), set up by Alex Ellis as a global communty to grow and monitor your own food with the Raspberry Pi.
 
+<a href="https://bfaulty.z16.web.core.windows.net/"><image src="https://bfaulty.z16.web.core.windows.net/image.jpg" height="270" alt="Live preview"></a>
+
 Note that this a fork of Alex's original [#growlab](https://github.com/alexellis/growlab) repo, customized for my own hardware.
 
 ## Hardware
